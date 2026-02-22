@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Main.genshin" xml:space="preserve">
+    <value>Genshin Impact</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="Main.genshinForNVI.Content" xml:space="preserve">
+    <value>Genshin Impact</value>
+    <comment>Content</comment>
+  </data>
+  <data name="Main.genshinForTB.Text" xml:space="preserve">
+    <value>Genshin Impact</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="HomeView.genshinIntroduction.Text" xml:space="preserve">
+    <value>View and sync Genshin Impact wish records</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="HomeView.ZZZIntroduction.Text" xml:space="preserve">
+    <value>View and Sync Zenless Zone Zero Gacha Records</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="HomeView.houkaiStarRailIntroduction.Text" xml:space="preserve">
+    <value>View and Sync Honkai: Star Rail Gacha Records</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="Main.houkaiStarRail" xml:space="preserve">
+    <value>Honkai: Star Rail</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="Main.houkaiStarRailForNVI.Content" xml:space="preserve">
+    <value>Honkai: Star Rail</value>
+    <comment>Content</comment>
+  </data>
+  <data name="HomeView.title.Text" xml:space="preserve">
+    <value>Welcome to this tool. Please click the button below or the button on the side to go to the corresponding interface to use it.</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="Main.ZZZ" xml:space="preserve">
+    <value>Zenless Zone Zero</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="Main.ZZZForNVI.Content" xml:space="preserve">
+    <value>Zenless Zone Zero</value>
+    <comment>Content</comment>
+  </data>
+  <data name="SettingPage.title.Text" xml:space="preserve">
+    <value>Setting</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.normal.Text" xml:space="preserve">
+    <value>Nomal</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.lang.Text" xml:space="preserve">
+    <value>Language</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.langTellMe.Text" xml:space="preserve">
+    <value>Set app interface language</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.theme.Text" xml:space="preserve">
+    <value>Theme</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.themeTellMe.Text" xml:space="preserve">
+    <value>Set the software interface to dark mode or light mode</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="Main.houkaiStarRailForTB.Text" xml:space="preserve">
+    <value>Honkai: Star Rail</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="Main.ZZZForTB.Text" xml:space="preserve">
+    <value>Zenless Zone Zero</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.interface.Text" xml:space="preserve">
+    <value>Interface</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.interfaceColor.Text" xml:space="preserve">
+    <value>Color</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.interfaceColorTellMe.Text" xml:space="preserve">
+    <value>Set app appearance color</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.gameSettingTB.Text" xml:space="preserve">
+    <value>Game Setting</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.genshinSettingTellMe.Text" xml:space="preserve">
+    <value>Set the Genshin Impact gacha records and game installation path</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.hsrSettingTellMe.Text" xml:space="preserve">
+    <value>Set the Honkai: Star Rail gacha records and game installation path</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.zzzSettingTellMe.Text" xml:space="preserve">
+    <value>Set the Zenless Zone Zero gacha records and game installation path</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GenshinSettingPage.title" xml:space="preserve">
+    <value>Genshin Impact Setting</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GameSetting.gamePath.Text" xml:space="preserve">
+    <value>Game Installation Directory</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GameSetting.gamePathTellMe.Text" xml:space="preserve">
+    <value>Choose the game's installation directory</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GameSetting.serchGame.Content" xml:space="preserve">
+    <value>Manual search</value>
+    <comment>Content</comment>
+  </data>
+  <data name="GameSetting.RmHistory.Text" xml:space="preserve">
+    <value>Clear all records</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GameSetting.RmHistoryTellMe.Text" xml:space="preserve">
+    <value>Clear stored gacha records</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GameSetting.Rm.Content" xml:space="preserve">
+    <value>Clear</value>
+    <comment>Content</comment>
+  </data>
+  <data name="MainWindow.home.Content" xml:space="preserve">
+    <value>Home</value>
+    <comment>Content</comment>
+  </data>
+  <data name="App.title.Text" xml:space="preserve">
+    <value>HoYoverse game gacha records</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="MessageBox.langRestartTitle" xml:space="preserve">
+    <value>Restart required</value>
+  </data>
+  <data name="MessageBox.langRestartContent" xml:space="preserve">
+    <value>The language setting has been saved. Please restart the app to apply changes.</value>
+  </data>
+  <data name="MessageBox.Primary" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SettingPage.followSys.Content" xml:space="preserve">
+    <value>Follow system</value>
+  </data>
+  <data name="SettingPage.light.Content" xml:space="preserve">
+    <value>Light</value>
+  </data>
+  <data name="SettingPage.dark.Content" xml:space="preserve">
+    <value>Dark</value>
+  </data>
+  <data name="MessageBox.Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="MessageBox.No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="SettingPage.colorChange.Content" xml:space="preserve">
+    <value>Choose</value>
+  </data>
+  <data name="SettingPage.OutputLogs.Text" xml:space="preserve">
+    <value>Export Logs</value>
+  </data>
+  <data name="SettingPage.OutputLogsTellMe.Text" xml:space="preserve">
+    <value>Select path to export logs</value>
+  </data>
+  <data name="MessageBox.info" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="MessageBox.copyFinish" xml:space="preserve">
+    <value>Logs copy finish, the path is: </value>
+  </data>
+  <data name="MessageBox.Error" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="GetHistoryFile.notFound" xml:space="preserve">
+    <value>Failed to parse the game installation path.</value>
+  </data>
+  <data name="GetHistoryFile.failedToReadFile" xml:space="preserve">
+    <value>Failed to read files.</value>
+  </data>
+  <data name="GetHistoryFile.failedToLoadFile" xml:space="preserve">
+    <value>Failed to parse the file.</value>
+  </data>
+  <data name="MessageBox.warn" xml:space="preserve">
+    <value>Warning</value>
+  </data>
+  <data name="GetWebJsonItems.isYourUID" xml:space="preserve">
+    <value>Is this your UID?</value>
+  </data>
+  <data name="GetWebJsonItems.failedConnect" xml:space="preserve">
+    <value>Failed to connect.</value>
+  </data>
+  <data name="GameSetting.exHis.Text" xml:space="preserve">
+    <value>Export gacha records</value>
+  </data>
+  <data name="GameSetting.exHisTellMe.Text" xml:space="preserve">
+    <value>Export the gacha records of this program as a CSV file</value>
+  </data>
+  <data name="GameSetting.exTo.Content" xml:space="preserve">
+    <value>Export to...</value>
+  </data>
+  <data name="GameSetting.imHis.Text" xml:space="preserve">
+    <value>Import gacha records</value>
+  </data>
+  <data name="GameSetting.imHisTellMe.Text" xml:space="preserve">
+    <value>Select the CSV file of gacha records to import into this program</value>
+  </data>
+  <data name="Type.UP" xml:space="preserve">
+    <value>UP Character Pool</value>
+  </data>
+  <data name="Type.weapon" xml:space="preserve">
+    <value>Weapon Pool</value>
+  </data>
+  <data name="Type.permanent" xml:space="preserve">
+    <value>Permanent Pool</value>
+  </data>
+  <data name="Type.all" xml:space="preserve">
+    <value>All</value>
+  </data>
+  <data name="Type.agent" xml:space="preserve">
+    <value>Agent Pool</value>
+  </data>
+  <data name="Type.lightCone" xml:space="preserve">
+    <value>Light Cone Pool</value>
+  </data>
+  <data name="Type.bangboo" xml:space="preserve">
+    <value>Bangboo Pool</value>
+  </data>
+  <data name="Type.WEngine" xml:space="preserve">
+    <value>W-Engine Pool</value>
+  </data>
+  <data name="Type.collaboration" xml:space="preserve">
+    <value>Collaboration Pool</value>
+  </data>
+  <data name="MessageBox.cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Welcom.WelcomeText" xml:space="preserve">
+    <value>Welcome to the {0} Gacha History Tool. Please click a button below to continue, Please close the game before accessing the gacha records.</value>
+  </data>
+  <data name="Welcome.SelectUid.Text" xml:space="preserve">
+    <value>Select your UID:</value>
+  </data>
+  <data name="Welcome.UidPlaceholder" xml:space="preserve">
+    <value>Select UID</value>
+  </data>
+  <data name="Welcome.InstallPath" xml:space="preserve">
+    <value>Current game installation path: </value>
+  </data>
+  <data name="Welcome.BtnGetHistory.Content" xml:space="preserve">
+    <value>Fetch Gacha History</value>
+  </data>
+  <data name="Welcome.BtnViewHistory.Content" xml:space="preserve">
+    <value>View History</value>
+  </data>
+  <data name="Welcome.BtnLaunchGame.Content" xml:space="preserve">
+    <value>Launch Game</value>
+  </data>
+  <data name="Welcome.HistoryTitle" xml:space="preserve">
+    <value>Fetch Gacha History</value>
+  </data>
+  <data name="Welcome.HContentText" xml:space="preserve">
+    <value>Please select the record type you want to retrieve</value>
+  </data>
+  <data name="Welcome.NoPath" xml:space="preserve">
+    <value>The installation path was not detected. Please manually add the installation path in the settings.</value>
+  </data>
+  <data name="Welcome.GetFinish" xml:space="preserve">
+    <value>Acquisition complete!</value>
+  </data>
+  <data name="Welcome.HGStart" xml:space="preserve">
+    <value>Fetching records may take some time and no progress will be shown. A dialog will appear once the process is complete. Please wait patiently.</value>
+  </data>
+  <data name="GameSetting.PermanentCharacter.Text" xml:space="preserve">
+    <value>Permanent character</value>
+  </data>
+  <data name="GameSetting.PermanentCharacterTellMe.Text" xml:space="preserve">
+    <value>Set a permanent character for easier analysis</value>
+  </data>
+  <data name="GameSetting.PermanentCharacterSetting" xml:space="preserve">
+    <value>Permanent character setting</value>
+  </data>
+  <data name="Common.Add" xml:space="preserve">
+    <value>Add row</value>
+  </data>
+  <data name="GameSetting.Time" xml:space="preserve">
+    <value>Time</value>
+  </data>
+  <data name="GameSetting.Character" xml:space="preserve">
+    <value>Character</value>
+  </data>
+  <data name="Common.Delete" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="Common.Reset" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="Common.Analysis.Content" xml:space="preserve">
+    <value>Analysis</value>
+  </data>
+  <data name="HomePage.Attention.Text" xml:space="preserve">
+    <value>Note: Before use, please go to the settings to configure the game installation path and deviation settings to ensure the program runs properly. Additionally, the in-game language and this program should be the same, otherwise it may cause the program to malfunction. The program currently does not support the international version; this issue will be fixed later.</value>
+  </data>
+  <data name="GetWebJson.Select" xml:space="preserve">
+    <value>Querying {0} page {1}</value>
+  </data>
+  <data name="GetWebJson.finish" xml:space="preserve">
+    <value>{0} construction completed!</value>
+  </data>
+  <data name="GetWebJson.OpenGame" xml:space="preserve">
+    <value>Please open the game and click to obtain the gacha records before trying again.</value>
+  </data>
+  <data name="GetWebJson.Lang" xml:space="preserve">
+    <value>Programming languages are different from game languages. Do you want to continue?</value>
+  </data>
+  <data name="SettingControl.EXFinish" xml:space="preserve">
+    <value>Export completed</value>
+  </data>
+  <data name="SettingControl.NotFoundRecords" xml:space="preserve">
+    <value>No gacha records found. Please obtain some and try again.</value>
+  </data>
+  <data name="SettingControl.CleanRecords" xml:space="preserve">
+    <value>Clearing the data will erase all analysis records. Do you want to continue?</value>
+  </data>
+  <data name="Setting.GameNotRun" xml:space="preserve">
+    <value>The game has not started</value>
+  </data>
+  <data name="GetHistory.LoadFileFailed" xml:space="preserve">
+    <value>An unexpected error occurred while reading the file.</value>
+  </data>
+  <data name="GetHistoryFile.FilePathLoadFailed" xml:space="preserve">
+    <value>Failed to parse file path</value>
+  </data>
+  <data name="GetHistoryFile.LoadGameFailed" xml:space="preserve">
+    <value>Unknown game or game version, please reset the game installation path.</value>
+  </data>
+  <data name="HistoryView.GachaPool" xml:space="preserve">
+    <value>Please select a gacha pool</value>
+  </data>
+  <data name="WGC.UIDComboBox" xml:space="preserve">
+    <value>Please select a UID!</value>
+  </data>
+  <data name="HistoryView.NoGachaPool" xml:space="preserve">
+    <value>Please select the gacha pool you want to check!</value>
+  </data>
+  <data name="SettingControl.SelectGame" xml:space="preserve">
+    <value>Please select the {0} in the game installation directory</value>
+  </data>
+  <data name="MessageBox.NotPathTitle" xml:space="preserve">
+    <value>No file chosen</value>
+  </data>
+  <data name="SettingControl.HSRSetting" xml:space="preserve">
+    <value>Honkai: Star Rail Setting</value>
+  </data>
+  <data name="SettingControl.ZZZSetting" xml:space="preserve">
+    <value>Zenless Zone Zero Setting</value>
+  </data>
+</root>

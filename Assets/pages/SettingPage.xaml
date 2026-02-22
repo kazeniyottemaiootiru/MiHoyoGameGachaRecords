@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="MiHoyoGameGachaRecords.Assets.pages.SettingPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MiHoyoGameGachaRecords.Assets.pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:muxc="using:Microsoft.UI.Xaml.Controls"
+    mc:Ignorable="d"
+    Background="Transparent">
+
+
+    <ScrollViewer Background="Transparent">
+        <StackPanel Spacing="12"
+                Padding="24">
+
+            <!--页面标题-->
+            <TextBlock x:Uid="SettingPage/title"
+                       FontSize="28"
+                       FontWeight="SemiBold"/>
+
+            <!--常规-->
+            <StackPanel Spacing="12">
+                <TextBlock x:Uid="SettingPage/normal"
+                           FontSize="18"
+                           FontWeight="SemiBold"/>
+
+                <!--语言选择-->
+                <Border Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                        CornerRadius="8"
+                        Padding="16">
+
+                    <Grid Background="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+
+                        <StackPanel>
+                            <TextBlock x:Uid="SettingPage/lang"/>
+                            <TextBlock x:Uid="SettingPage/langTellMe"
+                                    FontSize="12"
+                                    Opacity="0.6"/>
+                        </StackPanel>
+                        <ComboBox Grid.Column="1"
+                                Width="160"
+                                x:Name="lang"
+                                
+                                  SelectionChanged="LangSelect">
+                            <x:String>简体中文</x:String>
+                            <x:String>繁體中文</x:String>
+                            <x:String>日本語</x:String>
+                            <x:String>English</x:String>
+                            <!--<ComboBoxItem Content="简体中文（默认）" x:Name="zh_CN"/>
+                            <ComboBoxItem Content="繁體中文" x:Name="zh_TW"/>
+                            <ComboBoxItem Content="日本語" x:Name="jp_JP"/>
+                            <ComboBoxItem Content="English" x:Name="en_US"/>-->
+                        </ComboBox>
+                    </Grid>
+                </Border>
+            </StackPanel>
+
+            <!--外观-->
+            <StackPanel Spacing="12">
+                <Border Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                        CornerRadius="8"
+                        Padding="16">
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <TextBlock x:Uid="SettingPage/theme"/>
+                            <TextBlock x:Uid="SettingPage/themeTellMe"
+                                    FontSize="12"
+                                    Opacity="0.6"/>
+                        </StackPanel>
+                        <ComboBox Grid.Column="1"
+                                Width="160"
+                                x:Name="theme"
+                                SelectionChanged="ThemeSelect">
+
+                            <ComboBoxItem x:Uid="SettingPage/followSys" Tag="followSystem"/>
+                            <ComboBoxItem x:Uid="SettingPage/light" Tag="light"/>
+                            <ComboBoxItem x:Uid="SettingPage/dark" Tag="dark"/>
+                        </ComboBox>
+                    </Grid>
+                </Border>
+            </StackPanel>
+
+            <Button HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch"
+        HorizontalContentAlignment="Stretch"
+        VerticalContentAlignment="Stretch"
+        BorderThickness="0"
+        Padding="0"
+        Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+        Click="OutputLogs">
+
+                <Grid HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch">
+                    <Grid Padding="16"
+                ColumnSpacing="12">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Spacing="2">
+                            <TextBlock x:Uid="SettingPage/OutputLogs"/>
+                            <TextBlock x:Uid="SettingPage/OutputLogsTellMe"
+                        FontSize="12"
+                        Opacity="0.6"/>
+                        </StackPanel>
+
+                        <TextBlock Grid.Column="1"
+                       Text="›"
+                       FontSize="30"
+                       Opacity="0.5"
+                       VerticalAlignment="Center"/>
+
+                    </Grid>
+                </Grid>
+            </Button>
+
+            <!--游戏设置-->
+            <StackPanel Spacing="12">
+                <TextBlock x:Uid="SettingPage/gameSettingTB"
+                           FontSize="18"
+                           FontWeight="SemiBold"/>
+            </StackPanel>
+
+            <!--原神-->
+            <Button HorizontalAlignment="Stretch"
+                    VerticalAlignment="Stretch"
+                    HorizontalContentAlignment="Stretch"
+                    VerticalContentAlignment="Stretch"
+                    BorderThickness="0"
+                    Padding="0"
+                    Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                    Click="GotoGenshinSettingPage">
+
+                <Grid HorizontalAlignment="Stretch"
+                      VerticalAlignment="Stretch">
+                    <Grid Padding="16"
+                            ColumnSpacing="12">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Spacing="2">
+                            <TextBlock x:Uid="Main/genshinForTB"/>
+                            <TextBlock x:Uid="SettingPage/genshinSettingTellMe"
+                                    FontSize="12"
+                                    Opacity="0.6"/>
+                        </StackPanel>
+
+                        <TextBlock Grid.Column="1"
+                                   Text="›"
+                                   FontSize="30"
+                                   Opacity="0.5"
+                                   VerticalAlignment="Center"/>
+
+                    </Grid>
+                </Grid>
+            </Button>
+
+            <!--崩坏：星穹铁道-->
+            <Button HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch"
+        HorizontalContentAlignment="Stretch"
+        VerticalContentAlignment="Stretch"
+        BorderThickness="0"
+        Padding="0"
+        Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                    Click="GotoHoukaiStarRailSettingPage">
+
+                <Grid HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch">
+                    <Grid Padding="16"
+                ColumnSpacing="12">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Spacing="2">
+                            <TextBlock x:Uid="Main/houkaiStarRailForTB"/>
+                            <TextBlock x:Uid="SettingPage/hsrSettingTellMe"
+                        FontSize="12"
+                        Opacity="0.6"/>
+                        </StackPanel>
+
+                        <TextBlock Grid.Column="1"
+                       Text="›"
+                       FontSize="30"
+                       Opacity="0.5"
+                       VerticalAlignment="Center"/>
+
+                    </Grid>
+                </Grid>
+            </Button>
+
+            <!--绝区零-->
+            <Button HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch"
+        HorizontalContentAlignment="Stretch"
+        VerticalContentAlignment="Stretch"
+        BorderThickness="0"
+        Padding="0"
+        Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                    Click="GotoZZZSettingPage">
+
+                <Grid HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch">
+                    <Grid Padding="16"
+                ColumnSpacing="12">
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+
+                        <StackPanel Spacing="2">
+                            <TextBlock x:Uid="Main/ZZZForTB"/>
+                            <TextBlock x:Uid="SettingPage/zzzSettingTellMe"
+                        FontSize="12"
+                        Opacity="0.6"/>
+                        </StackPanel>
+
+                        <TextBlock Grid.Column="1"
+                       Text="›"
+                       FontSize="30"
+                       Opacity="0.5"
+                       VerticalAlignment="Center"/>
+
+                    </Grid>
+                </Grid>
+            </Button>
+
+        </StackPanel>
+    </ScrollViewer>
+</Page>

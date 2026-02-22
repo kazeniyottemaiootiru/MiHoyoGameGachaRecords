@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="MiHoyoGameGachaRecords.Assets.pages.WelcomeGameControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MiHoyoGameGachaRecords.Assets.pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid>
+        <StackPanel
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Spacing="16"
+            MaxWidth="1000">
+
+            <!-- 第一行：提示语 -->
+            <TextBlock
+                x:Name="TitleText"
+                TextWrapping="Wrap"
+                TextAlignment="Center"
+                FontSize="40"
+                FontWeight="SemiBold" />
+
+            <!-- 第二行：UID选择 -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="8">
+                <TextBlock
+                    x:Uid="Welcome/SelectUid"
+                    FontSize="20"
+                    VerticalAlignment="Center" />
+
+                <ComboBox
+                    x:Name="UidComboBox"
+                    Width="200"/>
+            </StackPanel>
+
+            <!-- 第三行：路径 -->
+            <TextBlock
+                x:Name="PathText"
+                FontSize="15"
+                Opacity="0.7"
+                TextAlignment="Center"
+                TextWrapping="Wrap" />
+
+            <!-- 第四行：按钮 -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="12">
+                <Button
+                    x:Uid="Welcome/BtnGetHistory"
+                    Width="200"
+                    Height="40"
+                    FontSize="18"
+                    Click="GetHistory_Click" />
+
+                <Button
+                    x:Uid="Welcome/BtnViewHistory"
+                    Width="200"
+                    Height="40"
+                    FontSize="18"
+                    Click="ViewHistory_Click" />
+
+                <Button
+                    x:Uid="Welcome/BtnLaunchGame"
+                    Width="200"
+                    Height="40"
+                    FontSize="18"
+                    Click="LaunchGame_Click" />
+            </StackPanel>
+
+            <TextBlock x:Name="SelectInfo" 
+                       FontSize="15"
+                       TextWrapping="Wrap"
+                       TextAlignment="Center"/>
+
+        </StackPanel>
+    </Grid>
+</UserControl>

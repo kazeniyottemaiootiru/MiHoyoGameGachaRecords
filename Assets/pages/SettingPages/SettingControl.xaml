@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<UserControl
+    x:Class="MiHoyoGameGachaRecords.Assets.pages.SettingPages.SettingControl"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MiHoyoGameGachaRecords.Assets.pages.SettingPages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <ScrollViewer Background="Transparent">
+        <StackPanel Spacing="24"
+                Padding="24">
+            <!--<Grid Background="Transparent">-->
+            <StackPanel Spacing="12">
+                <TextBlock x:Name="Title"
+                           FontSize="18"
+                           FontWeight="SemiBold"/>
+
+                <!--<Border Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                        CornerRadius="8"
+                        Padding="16">
+
+                    <Grid Background="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <TextBlock x:Uid="GameSetting/gameServer"/>
+                            <TextBlock x:Uid="GameSetting/gameServerTellMe"
+                                    FontSize="12"
+                                    Opacity="0.6"/>
+                        </StackPanel>
+                        <ComboBox Grid.Column="1"
+                                  Width="140"
+                                  x:Name="GameServer">
+                            <ComboBoxItem Content="天空岛"/>
+                            <ComboBoxItem Content="世界树"/>
+
+                        </ComboBox>
+                    </Grid>
+                </Border>-->
+
+                <Border Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                        CornerRadius="8"
+                        Padding="16">
+
+                    <Grid Background="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <TextBlock x:Uid="GameSetting/gamePath"/>
+                            <TextBlock x:Uid="GameSetting/gamePathTellMe"
+                                    FontSize="12"
+                                    Opacity="0.6"/>
+                        </StackPanel>
+                        <Button Grid.Column="1"
+                                x:Uid="GameSetting/serchGame"
+                                Width="140"
+                                x:Name="SelectGameInstallIndex"
+                                Click="ClickGameSerch"
+                                Style="{StaticResource AccentButtonStyle}"/>
+                    </Grid>
+                </Border>
+
+                <Border Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                        CornerRadius="8"
+                        Padding="16">
+
+                    <Grid Background="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <TextBlock x:Uid="GameSetting/RmHistory"/>
+                            <TextBlock x:Uid="GameSetting/RmHistoryTellMe"
+                                    FontSize="12"
+                                    Opacity="0.6"/>
+                        </StackPanel>
+                        <Button Grid.Column="1"
+                                x:Uid="GameSetting/Rm"
+                                Width="140"
+                                x:Name="RmMemory"
+                                Click="ClickRmMemory"
+                                Style="{StaticResource AccentButtonStyle}"/>
+                    </Grid>
+
+                </Border>
+
+                <Button HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch"
+        HorizontalContentAlignment="Stretch"
+        VerticalContentAlignment="Stretch"
+        BorderThickness="0"
+        Padding="0"
+        Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+        Click="PerCha_Click">
+
+                    <Grid HorizontalAlignment="Stretch"
+          VerticalAlignment="Stretch">
+                        <Grid Padding="16"
+              ColumnSpacing="12">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Spacing="2">
+                                <TextBlock x:Uid="GameSetting/PermanentCharacter"/>
+                                <TextBlock x:Uid="GameSetting/PermanentCharacterTellMe"
+                           FontSize="12"
+                           Opacity="0.6"/>
+                            </StackPanel>
+
+                            <TextBlock Grid.Column="1"
+                       Text="›"
+                       FontSize="30"
+                       Opacity="0.5"
+                       VerticalAlignment="Center"/>
+                        </Grid>
+                    </Grid>
+                </Button>
+
+                <!--导入，弃用，文件情况复杂，操作情况复杂，不想写了-->
+                <!--<Button HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        HorizontalContentAlignment="Stretch"
+                        VerticalContentAlignment="Stretch"
+                        BorderThickness="0"
+                        Padding="0"
+                        Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                        Click="ImportHistory">
+
+                    <Grid HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch">
+                        <Grid Padding="16"
+                              ColumnSpacing="12">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Spacing="2">
+                                <TextBlock x:Uid="GameSetting/imHis"/>
+                                <TextBlock x:Uid="GameSetting/imHisTellMe"
+                                           FontSize="12"
+                                           Opacity="0.6"/>
+                            </StackPanel>
+
+                            <TextBlock Grid.Column="1"
+                                       Text="›"
+                                       FontSize="30"
+                                       Opacity="0.5"
+                                       VerticalAlignment="Center"/>
+
+                        </Grid>
+                    </Grid>
+                </Button>-->
+
+                <Button HorizontalAlignment="Stretch"
+                        VerticalAlignment="Stretch"
+                        HorizontalContentAlignment="Stretch"
+                        VerticalContentAlignment="Stretch"
+                        BorderThickness="0"
+                        Padding="0"
+                        Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                        Click="ExportHistory">
+
+                    <Grid HorizontalAlignment="Stretch"
+                          VerticalAlignment="Stretch">
+                        <Grid Padding="16"
+                              ColumnSpacing="12">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+
+                            <StackPanel Spacing="2">
+                                <TextBlock x:Uid="GameSetting/exHis"/>
+                                <TextBlock x:Uid="GameSetting/exHisTellMe"
+                                           FontSize="12"
+                                           Opacity="0.6"/>
+                            </StackPanel>
+
+                            <TextBlock Grid.Column="1"
+                                       Text="›"
+                                       FontSize="30"
+                                       Opacity="0.5"
+                                       VerticalAlignment="Center"/>
+                        </Grid>
+                    </Grid>
+                </Button>
+
+            </StackPanel>
+
+
+        </StackPanel>
+
+    </ScrollViewer>
+</UserControl>

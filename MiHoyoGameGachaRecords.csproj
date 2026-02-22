@@ -1,0 +1,206 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows10.0.19041.0</TargetFramework>
+    <TargetPlatformMinVersion>10.0.17763.0</TargetPlatformMinVersion>
+    <RootNamespace>MiHoyoGameGachaRecords</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <Platforms>x86;x64;ARM64</Platforms>
+    <RuntimeIdentifiers>win-x86;win-x64;win-arm64</RuntimeIdentifiers>
+    <PublishProfile>win-$(Platform).pubxml</PublishProfile>
+    <UseWinUI>true</UseWinUI>
+    <EnableMsixTooling>true</EnableMsixTooling>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Remove="Strings\jp-JP\**" />
+    <EmbeddedResource Remove="Strings\jp-JP\**" />
+    <None Remove="Strings\jp-JP\**" />
+    <Page Remove="Strings\jp-JP\**" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="Assets\HomePage1.xaml" />
+    <Content Remove="Assets\HomePage1.xaml.cs" />
+    <Content Remove="Assets\pages\GenshinPage.xaml" />
+    <Content Remove="Assets\pages\GenshinPage.xaml.cs" />
+    <Content Remove="Assets\pages\GenshinSettingPage.xaml" />
+    <Content Remove="Assets\pages\GenshinSettingPage.xaml.cs" />
+    <Content Remove="Assets\pages\HistoryPages\GenshinHistoryPage.xaml" />
+    <Content Remove="Assets\pages\HistoryPages\GenshinHistoryPage.xaml.cs" />
+    <Content Remove="Assets\pages\HistoryPages\HSRHistoryPage.xaml" />
+    <Content Remove="Assets\pages\HistoryPages\HSRHistroyPage.xaml.cs" />
+    <Content Remove="Assets\pages\HistoryPages\ZZZHistoryPage.xaml" />
+    <Content Remove="Assets\pages\HistoryPages\ZZZHistoryPage.xaml.cs" />
+    <Content Remove="Assets\pages\HistoryView.xaml" />
+    <Content Remove="Assets\pages\HistoryView.xaml.cs" />
+    <Content Remove="Assets\pages\HomePage.xaml" />
+    <Content Remove="Assets\pages\HomePage.xaml.cs" />
+    <Content Remove="Assets\pages\HonkaiStarrailPage.xaml.cs" />
+    <Content Remove="Assets\pages\HoukaiStarrailPage.xaml" />
+    <Content Remove="Assets\pages\SettingPage.xaml" />
+    <Content Remove="Assets\pages\SettingPage.xaml.cs" />
+    <Content Remove="Assets\pages\SettingPages\GenshinSettingPage.xaml" />
+    <Content Remove="Assets\pages\SettingPages\GenshinSettingPage.xaml.cs" />
+    <Content Remove="Assets\pages\SettingPages\HonkaiStarRailSettingPage.xaml.cs" />
+    <Content Remove="Assets\pages\SettingPages\HoukaiStarRailSettingPage.xaml" />
+    <Content Remove="Assets\pages\SettingPages\SettingControl.xaml" />
+    <Content Remove="Assets\pages\SettingPages\SettingControl.xaml.cs" />
+    <Content Remove="Assets\pages\SettingPages\ZZZSettingPage.xaml" />
+    <Content Remove="Assets\pages\SettingPages\ZZZSettingPage.xaml.cs" />
+    <Content Remove="Assets\pages\WelcomeGameControl.xaml" />
+    <Content Remove="Assets\pages\WelcomeGameControl.xaml.cs" />
+    <Content Remove="Assets\pages\zzzPage.xaml" />
+    <Content Remove="Assets\pages\zzzPage.xaml.cs" />
+    <Content Remove="Assets\Strings\zh_CN\Resources.resw" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Assets\HomePage1.xaml" />
+    <None Remove="Assets\pages\GenshinPage.xaml" />
+    <None Remove="Assets\pages\GenshinSettingPage.xaml" />
+    <None Remove="Assets\pages\HistoryPages\GenshinHistoryPage.xaml" />
+    <None Remove="Assets\pages\HistoryPages\ZZZHistoryPage.xaml" />
+    <None Remove="Assets\pages\HistoryView.xaml" />
+    <None Remove="Assets\pages\HomePage.xaml" />
+    <None Remove="Assets\pages\SettingPage.xaml" />
+    <None Remove="Assets\pages\SettingPages\GenshinSettingPage.xaml" />
+    <None Remove="Assets\pages\SettingPages\SettingControl.xaml" />
+    <None Remove="Assets\pages\SettingPages\ZZZSettingPage.xaml" />
+    <None Remove="Assets\pages\WelcomeGameControl.xaml" />
+    <None Remove="Assets\pages\zzzPage.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Assets\SplashScreen.scale-200.png" />
+    <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\Square150x150Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.scale-200.png" />
+    <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
+    <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Manifest Include="$(ApplicationManifest)" />
+  </ItemGroup>
+
+  <!--
+    Defining the "Msix" ProjectCapability here allows the Single-project MSIX Packaging
+    Tools extension to be activated for this project even if the Windows App SDK Nuget
+    package has not yet been restored.
+  -->
+  <ItemGroup Condition="'$(DisableMsixProjectCapabilityAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+    <ProjectCapability Include="Msix" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="log4net" Version="3.2.0" />
+    <PackageReference Include="Microsoft.Windows.SDK.BuildTools" Version="10.0.26100.7463" />
+    <PackageReference Include="Microsoft.WindowsAppSDK" Version="1.8.260101001" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Assets\pages\HistoryView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Assets\pages\GenshinSettingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Assets\pages\Setting\GenshinSettingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Assets\pages\SettingPages\HoukaiStarRailSettingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Assets\pages\SettingPages\ZZZSettingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Assets\pages\WelcomeGameControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Assets\pages\SettingPages\SettingControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Assets\pages\HistoryPages\GenshinHistoryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Assets\pages\HistoryPages\HSRHistoryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Update="Assets\pages\HistoryPages\ZZZHistoryPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <None Update="log4net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Assets\pages\HomePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Assets\pages\SettingPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Assets\pages\zzzPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Assets\pages\HoukaiStarrailPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Assets\pages\GenshinPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Assets\HomePage1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+
+  <!--
+    Defining the "HasPackageAndPublishMenuAddedByProject" property here allows the Solution
+    Explorer "Package and Publish" context menu entry to be enabled for this project even if
+    the Windows App SDK Nuget package has not yet been restored.
+  -->
+  <PropertyGroup Condition="'$(DisableHasPackageAndPublishMenuAddedByProject)'!='true' and '$(EnableMsixTooling)'=='true'">
+    <HasPackageAndPublishMenu>true</HasPackageAndPublishMenu>
+  </PropertyGroup>
+
+  <!-- Publish Properties -->
+  <PropertyGroup>
+    <PublishReadyToRun Condition="'$(Configuration)' == 'Debug'">False</PublishReadyToRun>
+    <PublishReadyToRun Condition="'$(Configuration)' != 'Debug'">False</PublishReadyToRun>
+    <PublishTrimmed Condition="'$(Configuration)' == 'Debug'">False</PublishTrimmed>
+    <PublishTrimmed Condition="'$(Configuration)' != 'Debug'">False</PublishTrimmed>
+    <DefaultLanguage>zh-CN</DefaultLanguage>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <PackageCertificateThumbprint>D42597339399495A8DCF81EB10C1095540A4D598</PackageCertificateThumbprint>
+    <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
+    <UseWindowsForms>False</UseWindowsForms>
+    <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
+    <AppxPackageSigningTimestampDigestAlgorithm>SHA256</AppxPackageSigningTimestampDigestAlgorithm>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxSymbolPackageEnabled>False</AppxSymbolPackageEnabled>
+    <GenerateTestArtifacts>True</GenerateTestArtifacts>
+    <AppxBundle>Never</AppxBundle>
+    <HoursBetweenUpdateChecks>0</HoursBetweenUpdateChecks>
+    <AppxBundlePlatforms>x64</AppxBundlePlatforms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <Optimize>True</Optimize>
+  </PropertyGroup>
+  <ItemGroup>
+    <PRIResource Remove="Strings\jp-JP\**" />
+  </ItemGroup>
+</Project>

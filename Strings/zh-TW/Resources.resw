@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Main.genshin" xml:space="preserve">
+    <value>原神</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="Main.genshinForNVI.Content" xml:space="preserve">
+    <value>原神</value>
+    <comment>Content</comment>
+  </data>
+  <data name="Main.genshinForTB.Text" xml:space="preserve">
+    <value>原神</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="HomeView.genshinIntroduction.Text" xml:space="preserve">
+    <value>查看並同步原神抽卡記錄</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="HomeView.ZZZIntroduction.Text" xml:space="preserve">
+    <value>查看並同步絕區零抽卡紀錄</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="HomeView.houkaiStarRailIntroduction.Text" xml:space="preserve">
+    <value>查看並同步崩壞：星穹鐵道抽卡紀錄</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="Main.houkaiStarRail" xml:space="preserve">
+    <value>崩壞：星穹鐵道</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="Main.houkaiStarRailForNVI.Content" xml:space="preserve">
+    <value>崩壞：星穹鐵道</value>
+    <comment>Content</comment>
+  </data>
+  <data name="HomeView.title.Text" xml:space="preserve">
+    <value>歡迎使用本工具，請點擊下面的按鈕或點擊側面按鈕進入對應介面進行使用。</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="Main.ZZZ" xml:space="preserve">
+    <value>絕區零</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="Main.ZZZForNVI.Content" xml:space="preserve">
+    <value>絕區零</value>
+    <comment>Content</comment>
+  </data>
+  <data name="SettingPage.title.Text" xml:space="preserve">
+    <value>設定</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.normal.Text" xml:space="preserve">
+    <value>常规</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.lang.Text" xml:space="preserve">
+    <value>語言</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.langTellMe.Text" xml:space="preserve">
+    <value>設定應用介面語言</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.theme.Text" xml:space="preserve">
+    <value>主題</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.themeTellMe.Text" xml:space="preserve">
+    <value>設定介面的深色模式或淺色模式</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="Main.houkaiStarRailForTB.Text" xml:space="preserve">
+    <value>崩壞：星穹鐵道</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="Main.ZZZForTB.Text" xml:space="preserve">
+    <value>絕區零</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.interface.Text" xml:space="preserve">
+    <value>介面</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.interfaceColor.Text" xml:space="preserve">
+    <value>顔色</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.interfaceColorTellMe.Text" xml:space="preserve">
+    <value>設定應用程式顔色</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.gameSettingTB.Text" xml:space="preserve">
+    <value>游戲設定</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.genshinSettingTellMe.Text" xml:space="preserve">
+    <value>對原神抽卡記錄、遊戲安裝路徑進行設置</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.hsrSettingTellMe.Text" xml:space="preserve">
+    <value>對崩壞：星穹鐵道抽卡記錄、遊戲安裝路徑進行設置</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.zzzSettingTellMe.Text" xml:space="preserve">
+    <value>對絕區零抽卡記錄、遊戲安裝路徑進行設置</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GenshinSettingPage.title" xml:space="preserve">
+    <value>原神設定</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GameSetting.gamePath.Text" xml:space="preserve">
+    <value>遊戲安裝目錄</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GameSetting.gamePathTellMe.Text" xml:space="preserve">
+    <value>選擇遊戲的安裝目錄</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GameSetting.serchGame.Content" xml:space="preserve">
+    <value>手動查找</value>
+    <comment>Content</comment>
+  </data>
+  <data name="GameSetting.RmHistory.Text" xml:space="preserve">
+    <value>清除所有記錄</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GameSetting.RmHistoryTellMe.Text" xml:space="preserve">
+    <value>清除儲存的抽卡記錄</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GameSetting.Rm.Content" xml:space="preserve">
+    <value>清除</value>
+    <comment>Content</comment>
+  </data>
+  <data name="MainWindow.home.Content" xml:space="preserve">
+    <value>主頁</value>
+    <comment>Content</comment>
+  </data>
+  <data name="App.title.Text" xml:space="preserve">
+    <value>HoYoverse遊戲抽卡記錄</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="MessageBox.langRestartTitle" xml:space="preserve">
+    <value>需要重新啟動應用程式</value>
+  </data>
+  <data name="MessageBox.langRestartContent" xml:space="preserve">
+    <value>語言設定已儲存，重新啟動後才會生效。</value>
+  </data>
+  <data name="MessageBox.Primary" xml:space="preserve">
+    <value>確定</value>
+  </data>
+  <data name="SettingPage.followSys.Content" xml:space="preserve">
+    <value>跟隨系統</value>
+  </data>
+  <data name="SettingPage.light.Content" xml:space="preserve">
+    <value>淺色</value>
+  </data>
+  <data name="SettingPage.dark.Content" xml:space="preserve">
+    <value>深色</value>
+  </data>
+  <data name="MessageBox.Yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="MessageBox.No" xml:space="preserve">
+    <value>否</value>
+  </data>
+  <data name="SettingPage.colorChange.Content" xml:space="preserve">
+    <value>選擇</value>
+  </data>
+  <data name="SettingPage.OutputLogs.Text" xml:space="preserve">
+    <value>導出日誌</value>
+  </data>
+  <data name="SettingPage.OutputLogsTellMe.Text" xml:space="preserve">
+    <value>選擇路徑將日誌導出</value>
+  </data>
+  <data name="MessageBox.info" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="MessageBox.copyFinish" xml:space="preserve">
+    <value>日誌複製完成，複製路徑為：</value>
+  </data>
+  <data name="MessageBox.Error" xml:space="preserve">
+    <value>錯誤</value>
+  </data>
+  <data name="GetHistoryFile.notFound" xml:space="preserve">
+    <value>遊戲安裝路徑解析失敗。</value>
+  </data>
+  <data name="GetHistoryFile.failedToReadFile" xml:space="preserve">
+    <value>檔案讀取失敗。</value>
+  </data>
+  <data name="GetHistoryFile.failedToLoadFile" xml:space="preserve">
+    <value>檔案解析失敗。</value>
+  </data>
+  <data name="MessageBox.warn" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="GetWebJsonItems.isYourUID" xml:space="preserve">
+    <value>這是你的UID嗎？</value>
+  </data>
+  <data name="GetWebJsonItems.failedConnect" xml:space="preserve">
+    <value>連接失敗。</value>
+  </data>
+  <data name="GameSetting.exHis.Text" xml:space="preserve">
+    <value>導出抽卡記錄</value>
+  </data>
+  <data name="GameSetting.exHisTellMe.Text" xml:space="preserve">
+    <value>將本程式的抽卡記錄導出為一個CSV檔案</value>
+  </data>
+  <data name="GameSetting.exTo.Content" xml:space="preserve">
+    <value>導出到…</value>
+  </data>
+  <data name="GameSetting.imHis.Text" xml:space="preserve">
+    <value>導入抽卡記錄</value>
+  </data>
+  <data name="GameSetting.imHisTellMe.Text" xml:space="preserve">
+    <value>選擇CSV文件的抽卡記錄導入本程式</value>
+  </data>
+  <data name="Type.UP" xml:space="preserve">
+    <value>UP角色池</value>
+  </data>
+  <data name="Type.weapon" xml:space="preserve">
+    <value>武器池</value>
+  </data>
+  <data name="Type.permanent" xml:space="preserve">
+    <value>常駐池</value>
+  </data>
+  <data name="Type.all" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="Type.agent" xml:space="preserve">
+    <value>代理人池</value>
+  </data>
+  <data name="Type.lightCone" xml:space="preserve">
+    <value>光錐池</value>
+  </data>
+  <data name="Type.bangboo" xml:space="preserve">
+    <value>邦布池</value>
+  </data>
+  <data name="Type.WEngine" xml:space="preserve">
+    <value>音擎池</value>
+  </data>
+  <data name="Type.collaboration" xml:space="preserve">
+    <value>聯動池</value>
+  </data>
+  <data name="MessageBox.cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Welcom.WelcomeText" xml:space="preserve">
+    <value>歡迎使用{0}抽卡記錄器，請點擊下方按鈕進行操作，獲取抽卡記錄前請先關閉遊戲</value>
+  </data>
+  <data name="Welcome.SelectUid.Text" xml:space="preserve">
+    <value>請選擇你的UID：</value>
+  </data>
+  <data name="Welcome.UidPlaceholder" xml:space="preserve">
+    <value>請選擇UID</value>
+  </data>
+  <data name="Welcome.InstallPath" xml:space="preserve">
+    <value>目前遊戲安裝路徑：</value>
+  </data>
+  <data name="Welcome.BtnGetHistory.Content" xml:space="preserve">
+    <value>取得抽卡記錄</value>
+  </data>
+  <data name="Welcome.BtnViewHistory.Content" xml:space="preserve">
+    <value>查看記錄</value>
+  </data>
+  <data name="Welcome.BtnLaunchGame.Content" xml:space="preserve">
+    <value>啟動遊戲</value>
+  </data>
+  <data name="Welcome.HistoryTitle" xml:space="preserve">
+    <value>取得抽卡記錄</value>
+  </data>
+  <data name="Welcome.HContentText" xml:space="preserve">
+    <value>請選擇要取得的記錄類型</value>
+  </data>
+  <data name="Welcome.NoPath" xml:space="preserve">
+    <value>未識別到安裝路徑，請手動至設定新增安裝路徑。</value>
+  </data>
+  <data name="Welcome.GetFinish" xml:space="preserve">
+    <value>取得完畢！</value>
+  </data>
+  <data name="Welcome.HGStart" xml:space="preserve">
+    <value>取得記錄可能需要較長時間，過程中不會顯示提示。完成後將會彈出通知，請耐心等候。</value>
+  </data>
+  <data name="GameSetting.PermanentCharacter.Text" xml:space="preserve">
+    <value>常駐角色</value>
+  </data>
+  <data name="GameSetting.PermanentCharacterTellMe.Text" xml:space="preserve">
+    <value>設定常駐角色方便進行分析</value>
+  </data>
+  <data name="GameSetting.PermanentCharacterSetting" xml:space="preserve">
+    <value>常駐角色設定</value>
+  </data>
+  <data name="Common.Add" xml:space="preserve">
+    <value>添加行</value>
+  </data>
+  <data name="GameSetting.Time" xml:space="preserve">
+    <value>時間</value>
+  </data>
+  <data name="GameSetting.Character" xml:space="preserve">
+    <value>角色</value>
+  </data>
+  <data name="Common.Delete" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="Common.Reset" xml:space="preserve">
+    <value>重置</value>
+  </data>
+  <data name="Common.Analysis.Content" xml:space="preserve">
+    <value>分析</value>
+  </data>
+  <data name="HomePage.Attention.Text" xml:space="preserve">
+    <value>注：使用之前請先至設定配置遊戲安裝路徑和歪池情況，保證程式正常運行。同時，遊戲內語言和本程式應相同，否則將導致程式運行異常。目前程式尚不支援國際服，此問題後期修復。</value>
+  </data>
+  <data name="GetWebJson.Select" xml:space="preserve">
+    <value>正在查詢{0}第{1}頁</value>
+  </data>
+  <data name="GetWebJson.finish" xml:space="preserve">
+    <value>{0}構建完畢！</value>
+  </data>
+  <data name="GetWebJson.OpenGame" xml:space="preserve">
+    <value>請打開遊戲並點擊獲取抽卡記錄後再試。</value>
+  </data>
+  <data name="GetWebJson.Lang" xml:space="preserve">
+    <value>程式語言與遊戲語言不同，是否繼續？</value>
+  </data>
+  <data name="SettingControl.EXFinish" xml:space="preserve">
+    <value>導出完成</value>
+  </data>
+  <data name="SettingControl.NotFoundRecords" xml:space="preserve">
+    <value>無抽卡記錄，請獲取後再試。</value>
+  </data>
+  <data name="SettingControl.CleanRecords" xml:space="preserve">
+    <value>清除資料會導致分析記錄清空，是否繼續？</value>
+  </data>
+  <data name="Setting.GameNotRun" xml:space="preserve">
+    <value>遊戲未啟動</value>
+  </data>
+  <data name="GetHistory.LoadFileFailed" xml:space="preserve">
+    <value>讀取文件出現意外錯誤。</value>
+  </data>
+  <data name="GetHistoryFile.FilePathLoadFailed" xml:space="preserve">
+    <value>檔案路徑解析失敗</value>
+  </data>
+  <data name="GetHistoryFile.LoadGameFailed" xml:space="preserve">
+    <value>未知遊戲或遊戲版本，請重新設置遊戲安裝路徑。</value>
+  </data>
+  <data name="HistoryView.GachaPool" xml:space="preserve">
+    <value>請選擇卡池</value>
+  </data>
+  <data name="WGC.UIDComboBox" xml:space="preserve">
+    <value>請選擇UID！</value>
+  </data>
+  <data name="HistoryView.NoGachaPool" xml:space="preserve">
+    <value>請選擇要查詢的抽卡池！</value>
+  </data>
+  <data name="SettingControl.SelectGame" xml:space="preserve">
+    <value>請選擇遊戲安裝目錄下的{0}</value>
+  </data>
+  <data name="MessageBox.NotPathTitle" xml:space="preserve">
+    <value>未選擇文件</value>
+  </data>
+  <data name="SettingControl.HSRSetting" xml:space="preserve">
+    <value>崩壞：星穹鐵道設定</value>
+  </data>
+  <data name="SettingControl.ZZZSetting" xml:space="preserve">
+    <value>絕區零設定</value>
+  </data>
+</root>

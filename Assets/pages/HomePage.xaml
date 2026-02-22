@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Page
+    x:Class="MiHoyoGameGachaRecords.Assets.pages.HomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MiHoyoGameGachaRecords.Assets.pages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="Transparent">
+        <StackPanel Spacing="12"
+                    Padding="24"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock x:Uid="HomeView/title"
+                       FontSize="30"
+                       FontWeight="SemiBold"
+                       x:Name="HomeViewTitle"
+                       TextWrapping="Wrap"
+                       HorizontalAlignment="Center"/>
+
+            <StackPanel Orientation="Horizontal"
+                        HorizontalAlignment="Center">
+                <Button
+                    Padding="16"
+                    Margin="10"
+                    CornerRadius="8"
+                    Width="230"
+                    HorizontalContentAlignment="Stretch"
+                    VerticalContentAlignment="Stretch"
+                    Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                    Click="Button_Click"
+                    Tag="genshin">
+                    <StackPanel Spacing="8">
+                        <TextBlock x:Uid="Main/genshinForTB"
+                                   FontSize="16"
+                                   FontWeight="SemiBold"/>
+                        <TextBlock x:Uid="HomeView/genshinIntroduction"
+                                   FontSize="12"
+                                   Opacity="0.6"/>
+                    </StackPanel>
+                </Button>
+
+                <Button
+                    Padding="16"
+                    Margin="10"
+                    CornerRadius="8"
+                    Width="230"
+                    HorizontalContentAlignment="Stretch"
+                    VerticalContentAlignment="Stretch"
+                    Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                    Click="Button_Click"
+                    Tag="hsr">
+                    <StackPanel Spacing="8">
+                        <TextBlock x:Uid="Main/houkaiStarRailForTB"
+                                   FontSize="16"
+                                   FontWeight="SemiBold"/>
+                        <TextBlock x:Uid="HomeView/houkaiStarRailIntroduction"
+                                   FontSize="12"
+                                   Opacity="0.6"/>
+                    </StackPanel>
+                </Button>
+
+                <Button
+                    Padding="16"
+                    Margin="10"
+                    CornerRadius="8"
+                    Width="230"
+                    HorizontalContentAlignment="Stretch"
+                    VerticalContentAlignment="Stretch"
+                    Background="{ThemeResource CardBackgroundFillColorDefaultBrush}"
+                    Click="Button_Click"
+                    Tag="zzz">
+                    <StackPanel Spacing="8">
+                        <TextBlock x:Uid="Main/ZZZForTB"
+                                   FontSize="16"
+                                   FontWeight="SemiBold"/>
+                        <TextBlock x:Uid="HomeView/ZZZIntroduction"
+                                   FontSize="12"
+                                   Opacity="0.6"/>
+                    </StackPanel>
+                </Button>
+
+            </StackPanel>
+
+            <TextBlock 
+                FontSize="18" 
+                HorizontalAlignment="Center"
+                Foreground="Red"
+                Opacity="0.6"
+                TextWrapping="Wrap"
+                x:Uid="HomePage/Attention"/>
+
+        </StackPanel>
+    </Grid>
+
+</Page>

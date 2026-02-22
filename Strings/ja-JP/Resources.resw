@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Main.genshin" xml:space="preserve">
+    <value>原神</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="Main.genshinForNVI.Content" xml:space="preserve">
+    <value>原神</value>
+    <comment>Content</comment>
+  </data>
+  <data name="Main.genshinForTB.Text" xml:space="preserve">
+    <value>原神</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="HomeView.genshinIntroduction.Text" xml:space="preserve">
+    <value>原神のガチャ記録を確認して同期する</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="HomeView.ZZZIntroduction.Text" xml:space="preserve">
+    <value>ゼンレスゾーンゼロのガチャ記録を確認して同期する</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="HomeView.houkaiStarRailIntroduction.Text" xml:space="preserve">
+    <value>崩壊：スターレイルのガチャ記録を確認して同期する</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="Main.houkaiStarRail" xml:space="preserve">
+    <value>崩壊：スターレイル</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="Main.houkaiStarRailForNVI.Content" xml:space="preserve">
+    <value>崩壊：スターレイル</value>
+    <comment>Content</comment>
+  </data>
+  <data name="HomeView.title.Text" xml:space="preserve">
+    <value>本ツールをご利用いただきありがとうございます。下のボタン、または横のボタンをクリックして、対応する画面に進んでご使用ください。</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="Main.ZZZ" xml:space="preserve">
+    <value>ゼンレスゾーンゼロ</value>
+    <comment>For Code</comment>
+  </data>
+  <data name="Main.ZZZForNVI.Content" xml:space="preserve">
+    <value>ゼンレスゾーンゼロ</value>
+    <comment>Content</comment>
+  </data>
+  <data name="SettingPage.title.Text" xml:space="preserve">
+    <value>設定</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.normal.Text" xml:space="preserve">
+    <value>常规</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.lang.Text" xml:space="preserve">
+    <value>言語</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.langTellMe.Text" xml:space="preserve">
+    <value>アプリの言語を設定</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.theme.Text" xml:space="preserve">
+    <value>テーマ</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.themeTellMe.Text" xml:space="preserve">
+    <value>ソフトウェアのインターフェースをダークモードまたはライトモードに設定する</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="Main.houkaiStarRailForTB.Text" xml:space="preserve">
+    <value>崩壊：スターレイル</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="Main.ZZZForTB.Text" xml:space="preserve">
+    <value>ゼンレスゾーンゼロ</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.interface.Text" xml:space="preserve">
+    <value>インターフェース</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.interfaceColor.Text" xml:space="preserve">
+    <value>色</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.interfaceColorTellMe.Text" xml:space="preserve">
+    <value>アプリの色を設定</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.gameSettingTB.Text" xml:space="preserve">
+    <value>ゲーム設定</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.genshinSettingTellMe.Text" xml:space="preserve">
+    <value>原神のガチャ記録やゲームのインストールパスを設定する</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.hsrSettingTellMe.Text" xml:space="preserve">
+    <value>崩壊：スターレイルのガチャ記録やゲームのインストールパスを設定する</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="SettingPage.zzzSettingTellMe.Text" xml:space="preserve">
+    <value>ゼンレスゾーンゼロのガチャ記録やゲームのインストールパスを設定する</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GenshinSettingPage.title" xml:space="preserve">
+    <value>原神設定</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GameSetting.gamePath.Text" xml:space="preserve">
+    <value>ゲームのインストールディレクトリ</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GameSetting.gamePathTellMe.Text" xml:space="preserve">
+    <value>ゲームのインストール先を選択</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GameSetting.serchGame.Content" xml:space="preserve">
+    <value>手動で検索</value>
+    <comment>Content</comment>
+  </data>
+  <data name="GameSetting.RmHistory.Text" xml:space="preserve">
+    <value>すべで記録を削除</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GameSetting.RmHistoryTellMe.Text" xml:space="preserve">
+    <value>保存されたガチャ記録を消去する</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="GameSetting.Rm.Content" xml:space="preserve">
+    <value>クリア</value>
+    <comment>Content</comment>
+  </data>
+  <data name="MainWindow.home.Content" xml:space="preserve">
+    <value>ホーム</value>
+    <comment>Content</comment>
+  </data>
+  <data name="App.title.Text" xml:space="preserve">
+    <value>HoYoverseゲームのガチャ記録</value>
+    <comment>TextBlock</comment>
+  </data>
+  <data name="MessageBox.langRestartTitle" xml:space="preserve">
+    <value>再起動が必要です</value>
+  </data>
+  <data name="MessageBox.langRestartContent" xml:space="preserve">
+    <value>言語設定は保存されました。アプリを再起動すると反映されます。</value>
+  </data>
+  <data name="MessageBox.Primary" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="SettingPage.followSys.Content" xml:space="preserve">
+    <value>システムに従う</value>
+  </data>
+  <data name="SettingPage.light.Content" xml:space="preserve">
+    <value>ライト</value>
+  </data>
+  <data name="SettingPage.dark.Content" xml:space="preserve">
+    <value>ダーク</value>
+  </data>
+  <data name="MessageBox.Yes" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="MessageBox.No" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="SettingPage.colorChange.Content" xml:space="preserve">
+    <value>選択</value>
+  </data>
+  <data name="SettingPage.OutputLogs.Text" xml:space="preserve">
+    <value>ログをエクスポート</value>
+  </data>
+  <data name="SettingPage.OutputLogsTellMe.Text" xml:space="preserve">
+    <value>パスを選択してログをエクスポート</value>
+  </data>
+  <data name="MessageBox.info" xml:space="preserve">
+    <value>提示</value>
+  </data>
+  <data name="MessageBox.copyFinish" xml:space="preserve">
+    <value>ログの複製が完了しました。複製パスは：</value>
+  </data>
+  <data name="MessageBox.Error" xml:space="preserve">
+    <value>エラー</value>
+  </data>
+  <data name="GetHistoryFile.notFound" xml:space="preserve">
+    <value>ゲームのインストールパスの解析に失敗しました。</value>
+  </data>
+  <data name="GetHistoryFile.failedToReadFile" xml:space="preserve">
+    <value>ファイルの読み取りに失敗しました。</value>
+  </data>
+  <data name="GetHistoryFile.failedToLoadFile" xml:space="preserve">
+    <value>ファイルの解析に失敗しました。</value>
+  </data>
+  <data name="MessageBox.warn" xml:space="preserve">
+    <value>警告</value>
+  </data>
+  <data name="GetWebJsonItems.isYourUID" xml:space="preserve">
+    <value>これはあなたのUIDですか？</value>
+  </data>
+  <data name="GetWebJsonItems.failedConnect" xml:space="preserve">
+    <value>接続に失敗しました。</value>
+  </data>
+  <data name="GameSetting.exHis.Text" xml:space="preserve">
+    <value>ガチャ記録をエクスポート</value>
+  </data>
+  <data name="GameSetting.exHisTellMe.Text" xml:space="preserve">
+    <value>このプログラムのガチャ記録をCSVファイルとしてエクスポートする</value>
+  </data>
+  <data name="GameSetting.exTo.Content" xml:space="preserve">
+    <value>エクスポート先…</value>
+  </data>
+  <data name="GameSetting.imHis.Text" xml:space="preserve">
+    <value>ガチャ記録をインポート</value>
+  </data>
+  <data name="GameSetting.imHisTellMe.Text" xml:space="preserve">
+    <value>CSVファイルのガチャ記録をこのプログラムにインポートする</value>
+  </data>
+  <data name="Type.UP" xml:space="preserve">
+    <value>UPキャラクタープール</value>
+  </data>
+  <data name="Type.weapon" xml:space="preserve">
+    <value>武器プール</value>
+  </data>
+  <data name="Type.permanent" xml:space="preserve">
+    <value>常駐プール</value>
+  </data>
+  <data name="Type.all" xml:space="preserve">
+    <value>全部</value>
+  </data>
+  <data name="Type.agent" xml:space="preserve">
+    <value>エージェントプール</value>
+  </data>
+  <data name="Type.lightCone" xml:space="preserve">
+    <value>光円錐プール</value>
+  </data>
+  <data name="Type.bangboo" xml:space="preserve">
+    <value>ボンププール</value>
+  </data>
+  <data name="Type.WEngine" xml:space="preserve">
+    <value>音動機プール</value>
+  </data>
+  <data name="Type.collaboration" xml:space="preserve">
+    <value>コラボプール</value>
+  </data>
+  <data name="MessageBox.cancel" xml:space="preserve">
+    <value>キャンセル</value>
+  </data>
+  <data name="Welcom.WelcomeText" xml:space="preserve">
+    <value>{0}ガチャ履歴ツールへようこそ。下のボタンをクリックして操作してください、ガチャの記録を取得する前に、ゲームを閉じてください。</value>
+  </data>
+  <data name="Welcome.SelectUid.Text" xml:space="preserve">
+    <value>UIDを選択してください：</value>
+  </data>
+  <data name="Welcome.UidPlaceholder" xml:space="preserve">
+    <value>UIDを選択</value>
+  </data>
+  <data name="Welcome.InstallPath" xml:space="preserve">
+    <value>現在のゲームインストールパス：</value>
+  </data>
+  <data name="Welcome.BtnGetHistory.Content" xml:space="preserve">
+    <value>ガチャ履歴を取得</value>
+  </data>
+  <data name="Welcome.BtnViewHistory.Content" xml:space="preserve">
+    <value>履歴を見る</value>
+  </data>
+  <data name="Welcome.BtnLaunchGame.Content" xml:space="preserve">
+    <value>ゲームを起動</value>
+  </data>
+  <data name="Welcome.HistoryTitle" xml:space="preserve">
+    <value>ガチャ履歴を取得</value>
+  </data>
+  <data name="Welcome.HContentText" xml:space="preserve">
+    <value>取得するレコードの種類を選択してください</value>
+  </data>
+  <data name="Welcome.NoPath" xml:space="preserve">
+    <value>インストールパスが検出されませんでした。設定でインストールパスを手動で追加してください。</value>
+  </data>
+  <data name="Welcome.GetFinish" xml:space="preserve">
+    <value>取得完了！</value>
+  </data>
+  <data name="Welcome.HGStart" xml:space="preserve">
+    <value>記録の取得には時間がかかる場合があり、処理中の表示はありません。完了後にダイアログが表示されますので、しばらくお待ちください。</value>
+  </data>
+  <data name="GameSetting.PermanentCharacter.Text" xml:space="preserve">
+    <value>常駐キャラクター</value>
+  </data>
+  <data name="GameSetting.PermanentCharacterTellMe.Text" xml:space="preserve">
+    <value>常駐キャラクターを設定して分析しやすくする</value>
+  </data>
+  <data name="GameSetting.PermanentCharacterSetting" xml:space="preserve">
+    <value>常駐キャラクター設定</value>
+  </data>
+  <data name="Common.Add" xml:space="preserve">
+    <value>行を追加</value>
+  </data>
+  <data name="GameSetting.Time" xml:space="preserve">
+    <value>時間</value>
+  </data>
+  <data name="GameSetting.Character" xml:space="preserve">
+    <value>キャラクター</value>
+  </data>
+  <data name="Common.Delete" xml:space="preserve">
+    <value>消去</value>
+  </data>
+  <data name="Common.Reset" xml:space="preserve">
+    <value>リセット</value>
+  </data>
+  <data name="Common.Analysis.Content" xml:space="preserve">
+    <value>分析</value>
+  </data>
+  <data name="HomePage.Attention.Text" xml:space="preserve">
+    <value>注意：使用する前に、まず設定でゲームのインストールパスと歪みプールの状況を設定し、プログラムが正常に動作することを確認してください。また、ゲーム内の言語と本プログラムの言語は同じである必要があります。さもないと、プログラムが正常に動作しない場合があります。現在のところ、プログラムは国際版をサポートしていません。この問題は後で修正される予定です。</value>
+  </data>
+  <data name="GetWebJson.Select" xml:space="preserve">
+    <value>{0}第{1}ページを検索中</value>
+  </data>
+  <data name="GetWebJson.finish" xml:space="preserve">
+    <value>{0}の構築が完了しました！</value>
+  </data>
+  <data name="GetWebJson.OpenGame" xml:space="preserve">
+    <value>ゲームを開いて、ガチャ履歴を取得してからもう一度お試しください。</value>
+  </data>
+  <data name="GetWebJson.Lang" xml:space="preserve">
+    <value>プログラミング言語はゲーム言語とは異なります。続行しますか？</value>
+  </data>
+  <data name="SettingControl.EXFinish" xml:space="preserve">
+    <value>エクスポートが完了しました</value>
+  </data>
+  <data name="SettingControl.NotFoundRecords" xml:space="preserve">
+    <value>ガチャ履歴がありません。取得してからもう一度お試しください。</value>
+  </data>
+  <data name="SettingControl.CleanRecords" xml:space="preserve">
+    <value>データを削除すると分析記録が消去されます。続行しますか？</value>
+  </data>
+  <data name="Setting.GameNotRun" xml:space="preserve">
+    <value>ゲームは起動していません</value>
+  </data>
+  <data name="GetHistory.LoadFileFailed" xml:space="preserve">
+    <value>ファイルを読み込む際に予期しないエラーが発生しました。</value>
+  </data>
+  <data name="GetHistoryFile.FilePathLoadFailed" xml:space="preserve">
+    <value>ファイルパスの解析に失敗しました</value>
+  </data>
+  <data name="GetHistoryFile.LoadGameFailed" xml:space="preserve">
+    <value>未知のゲームまたはゲームバージョンです。ゲームのインストールパスを再設定してください。</value>
+  </data>
+  <data name="HistoryView.GachaPool" xml:space="preserve">
+    <value>ガチャを選んでください</value>
+  </data>
+  <data name="WGC.UIDComboBox" xml:space="preserve">
+    <value>UIDを選択してください！</value>
+  </data>
+  <data name="HistoryView.NoGachaPool" xml:space="preserve">
+    <value>ガチャを確認したいプールを選んでください！</value>
+  </data>
+  <data name="SettingControl.SelectGame" xml:space="preserve">
+    <value>ゲームのインストールディレクトリ内の{0}を選択してください</value>
+  </data>
+  <data name="MessageBox.NotPathTitle" xml:space="preserve">
+    <value>ファイルが選択されていません</value>
+  </data>
+  <data name="SettingControl.HSRSetting" xml:space="preserve">
+    <value>崩壊：スターレイル設定</value>
+  </data>
+  <data name="SettingControl.ZZZSetting" xml:space="preserve">
+    <value>ゼンレスゾーンゼロ設定</value>
+  </data>
+</root>

@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MiHoyoGameGachaRecords (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "MiHoyoGameGachaRecords (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}

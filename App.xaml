@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application
+    x:Class="MiHoyoGameGachaRecords.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MiHoyoGameGachaRecords">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />
+                <!-- Other merged dictionaries here -->
+            </ResourceDictionary.MergedDictionaries>
+            <!-- Other app resources here -->
+            
+            <!--NavigationView内容区背景-->
+            <SolidColorBrush x:Key="NavigationViewContentBackground" Color="Transparent"/>
+            <SolidColorBrush x:Key="ApplicationPageBackgroundThemeBrush" Color="Transparent"/>
+            <!--NavigationView左侧Pane背景-->
+            <SolidColorBrush x:Key="NavigationViewDefaultPaneBackground" Color="Transparent"/>
+            <Thickness x:Key="NavigationViewItemBorderThickness">0</Thickness>
+            <Thickness x:Key="NavigationViewPaneSeparatorThickness">0</Thickness>
+
+        </ResourceDictionary>
+    </Application.Resources>
+
+    
+</Application>
