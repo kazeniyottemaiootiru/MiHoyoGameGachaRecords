@@ -86,6 +86,7 @@ public sealed partial class WelcomeGameControl : UserControl
                 {
                     loader.GetString("Type/UP"),
                     loader.GetString("Type/weapon"),
+                    loader.GetString("Type/MixPool"),
                     loader.GetString("Type/permanent"),
                     loader.GetString("Type/all")
                 },
@@ -144,7 +145,8 @@ public sealed partial class WelcomeGameControl : UserControl
             {
                 0 => 301,
                 1 => 302,
-                2 => 200,
+                2 => 500,
+                3 => 200,
                 _ => null
             };
         }
@@ -183,6 +185,7 @@ public sealed partial class WelcomeGameControl : UserControl
                 await jsonItems.CreatCSVFile(await jsonItems.NeedJson(301, SelectInfo), 301, SelectInfo);
                 await jsonItems.CreatCSVFile(await jsonItems.NeedJson(302, SelectInfo), 302, SelectInfo);
                 await jsonItems.CreatCSVFile(await jsonItems.NeedJson(200, SelectInfo), 200, SelectInfo);
+                await jsonItems.CreatCSVFile(await jsonItems.NeedJson(500, SelectInfo), 500, SelectInfo);
             }
             else if (Game == "HoukaiStarRail")
             {
@@ -212,7 +215,7 @@ public sealed partial class WelcomeGameControl : UserControl
         }
         if(UidComboBox.SelectedIndex < 0)
         {
-            await MessageBox.Warn("请选择UID！");
+            await MessageBox.Warn(loader.GetString("WGC/UIDComboBox"));
             return;
         }
 

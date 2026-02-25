@@ -69,6 +69,7 @@ namespace MiHoyoGameGachaRecords.Assets.pages.HistoryPages
                 {
                     loader.GetString("Type/UP"),
                     loader.GetString("Type/weapon"),
+                    loader.GetString("Type/MixPool"),
                     loader.GetString("Type/permanent")
                 },
                 "HoukaiStarRail" => new[]
@@ -103,6 +104,13 @@ namespace MiHoyoGameGachaRecords.Assets.pages.HistoryPages
 
             string filePath = Path.Combine(HisFilePath, $"{pool}.csv");
             Mems = Setting.CSVReader(filePath);
+
+            // 修复对应抽卡记录文件不存在时没有提示
+            if (Mems == null || Mems.Count == 0)
+            {
+                await MessageBox.Warn(loader.GetString("HistoryView/NotFound"));
+                return;
+            }
 
             BuildView(pool);
         }
@@ -146,7 +154,8 @@ namespace MiHoyoGameGachaRecords.Assets.pages.HistoryPages
                 {
                     0 => "up",
                     1 => "weapon",
-                    2 => "permanent",
+                    2 => "mix",
+                    3 => "permanent",
                     _ => null
                 },
                 "HoukaiStarRail" => FilterComboBox.SelectedIndex switch

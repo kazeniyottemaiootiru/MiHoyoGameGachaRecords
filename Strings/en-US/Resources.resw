@@ -482,4 +482,10 @@
   <data name="SettingControl.ZZZSetting" xml:space="preserve">
     <value>Zenless Zone Zero Setting</value>
   </data>
+  <data name="Type.MixPool" xml:space="preserve">
+    <value>Chronicled Wish</value>
+  </data>
+  <data name="HistoryView.NotFound" xml:space="preserve">
+    <value>File not found, please retrieve the record and try again.</value>
+  </data>
 </root>

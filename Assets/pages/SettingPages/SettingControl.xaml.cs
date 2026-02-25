@@ -379,10 +379,10 @@ new() { name = "Weeping Cradle", time = "2024-07-04" }
         }
 
         public ObservableCollection<PermanentCharacter> Rows { get; } = [];
-        
+
         private async void PerCha_Click(object sender, RoutedEventArgs e)
         {
-            string path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, 
+            string path = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path,
                 "permanent_character", Game);
             if (!Directory.Exists(path))
             {
@@ -499,12 +499,26 @@ new() { name = "Weeping Cradle", time = "2024-07-04" }
                 Rows.Add(r);
             }
 
-            var rootPanel = new StackPanel{ Spacing = 16, Children = { buttonPanel, listView }};
+            // 常驻设置不全修复
+            var rootGrid = new Grid
+            {
+                RowDefinitions =
+                {
+                    new RowDefinition { Height = GridLength.Auto },
+                    new RowDefinition { Height = new GridLength(1, GridUnitType.Star) }
+                }
+            };
+
+            Grid.SetRow(buttonPanel, 0);
+            Grid.SetRow(listView, 1);
+
+            rootGrid.Children.Add(buttonPanel);
+            rootGrid.Children.Add(listView);
 
             ContentDialog dialog = new ContentDialog
             {
                 Title = loader.GetString("GameSetting/PermanentCharacterSetting"),
-                Content = rootPanel,
+                Content = rootGrid,
                 PrimaryButtonText = loader.GetString("MessageBox/Primary"),
                 CloseButtonText = loader.GetString("MessageBox/cancel"),
                 DefaultButton = ContentDialogButton.Primary,
@@ -517,8 +531,11 @@ new() { name = "Weeping Cradle", time = "2024-07-04" }
 
             List<PermanentCharacters> pc = [];
             foreach (var row in Rows)
-                pc.Add(new PermanentCharacters { name = row.Character, 
-                    time = row.Year + "-" + row.Month + "-" + row.Day });
+                pc.Add(new PermanentCharacters
+                {
+                    name = row.Character,
+                    time = row.Year + "-" + row.Month + "-" + row.Day
+                });
             //log.Info($"row1{characters.name}\ttime:{characters.time}");
             CreatFile(Path.Combine(path, files[Settings.language]), pc);
         }

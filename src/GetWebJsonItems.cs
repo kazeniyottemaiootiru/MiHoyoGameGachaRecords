@@ -31,7 +31,7 @@ namespace MiHoyoGameGachaRecords
         /// 获取是否连通并能获取数据的url
         /// </summary>
         /// <param name="gachaType">卡池情况。
-        /// 原神：up角色：301，武器池：302，常驻：200；
+        /// 原神：up角色：301，武器池：302，常驻：200，集录：500；
         /// 崩坏星穹铁道：up角色：11，光锥：12，常驻：1，联动：21；
         /// 绝区零：up角色：2001，音擎：3001，常驻：1001，邦布：5001</param>
         /// <returns>可用URL</returns>
@@ -50,8 +50,9 @@ namespace MiHoyoGameGachaRecords
             // 特殊
             else if (gachaType == 5001) Text = loader.GetString("Type/bangboo");
             else if (gachaType == 21) Text = loader.GetString("Type/collaboration");
+            else if (gachaType == 500) Text = loader.GetString("Type/MixPool");
 
-            GetHistoryFile getHistoryFile = new GetHistoryFile(gamePath);
+            GetHistoryFile getHistoryFile = new(gamePath);
             List<string>? urls = await getHistoryFile.ReadFile();
 
             if (urls == null) return null;
@@ -265,6 +266,7 @@ namespace MiHoyoGameGachaRecords
 
                 5001 => "bangboo",  // 绝区零，邦布
                 21 => "liandong",     // 星铁，联动
+                500 => "mix",   // 原神，混池
                 _ => ""
             };
 

@@ -447,4 +447,10 @@
   <data name="SettingControl.ZZZSetting" xml:space="preserve">
     <value>绝区零设置</value>
   </data>
+  <data name="Type.MixPool" xml:space="preserve">
+    <value>集录祈愿</value>
+  </data>
+  <data name="HistoryView.NotFound" xml:space="preserve">
+    <value>未找到文件，请获取记录后再试。</value>
+  </data>
 </root>
