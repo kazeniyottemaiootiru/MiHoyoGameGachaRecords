@@ -179,7 +179,7 @@
     <DefaultLanguage>zh-CN</DefaultLanguage>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
-    <PackageCertificateThumbprint>D42597339399495A8DCF81EB10C1095540A4D598</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>4537A1D533D69C4C2C0388C850E342A972A319E0</PackageCertificateThumbprint>
     <AppxPackageSigningEnabled>True</AppxPackageSigningEnabled>
     <UseWindowsForms>False</UseWindowsForms>
     <GenerateAppInstallerFile>False</GenerateAppInstallerFile>
