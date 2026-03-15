@@ -35,6 +35,11 @@ namespace MiHoyoGameGachaRecords
                     string webCache = Path.Combine(dir, "YuanShen_Data", "webCaches");
                     temp = await GetNeedDic(webCache);
                 }
+                else if (game == "")
+                {
+                    string webCache = Path.Combine(dir, "GenshinImpact_Data", "webCaches");
+                    temp = await GetNeedDic(webCache);
+                }
                 else if (game == "StarRail.exe")
                 {
                     string webCache = Path.Combine(dir, "StarRail_Data", "webCaches");

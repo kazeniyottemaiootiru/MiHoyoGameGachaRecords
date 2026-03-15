@@ -59,6 +59,9 @@ namespace MiHoyoGameGachaRecords
 
             contentFrame.Navigated += BackPage;
 
+            // 获取当前语言
+            string area = System.Globalization.CultureInfo.CurrentUICulture.Name;
+
             // 绑定标题栏控件颜色和设置加载
             if (this.Content is FrameworkElement root)
             {
@@ -279,16 +282,24 @@ namespace MiHoyoGameGachaRecords
 
             if (!File.Exists(settingFilePath))
             {
+                string area = System.Globalization.CultureInfo.CurrentUICulture.Name;
+                int langTemp = area switch
+                {
+                    "zh-CN" => 0,
+                    "zh-TW" => 1,
+                    "ja-JP" => 2,
+                    "en-US" => 3,
+                    _ => 3
+                };
                 defaultSetting = new SettingsData
                 {
-                    language = 0,
+                    language = langTemp,
                     theme = 0,
                 };
 
                 var options = new JsonSerializerOptions { WriteIndented = true };
                 string jsonString = JsonSerializer.Serialize(defaultSetting, options);
                 File.WriteAllText(settingFilePath, jsonString);
-                return;
             }
             else
             {
@@ -311,7 +322,7 @@ namespace MiHoyoGameGachaRecords
                 1 => "zh-TW",
                 2 => "ja-JP",
                 3 => "en-US",
-                _ => "zh-CN",
+                _ => "en-US",
             };
             return;
         }

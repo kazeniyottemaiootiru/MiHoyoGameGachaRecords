@@ -52,50 +52,7 @@ namespace MiHoyoGameGachaRecords.Assets.pages.SettingPages
 
         private async void ClickGameSerch(object sender, RoutedEventArgs e)
         {
-            string gameExe = Game switch
-            {
-                "Genshin" => "Yuanshen.exe",
-                "HoukaiStarRail" => "StarRail.exe",
-                "ZZZ" => "ZenlessZoneZero.exe",
-                _ => string.Empty
-            };
-            await MessageBox.Info(string.Format(loader.GetString("SettingControl/SelectGame"), gameExe));
-
-            string? filePath = await Setting.GetFilePath(".exe");
-
-            if (filePath == null)
-            {
-                await MessageBox.GamePathIsNull(gameExe);
-                return;
-            }
-
-            if (filePath != Settings.GenshinPath && Game == "Genshin")
-            {
-                Settings.GenshinPath = filePath;
-
-                string newJson = JsonSerializer.Serialize(Settings,
-                            new JsonSerializerOptions { WriteIndented = true });
-
-                File.WriteAllText(SettingPage.settingFilePath, newJson);
-            }
-            else if (filePath != Settings.HoukaiStarRailPath && Game == "HoukaiStarRail")
-            {
-                Settings.HoukaiStarRailPath = filePath;
-
-                string newJson = JsonSerializer.Serialize(Settings,
-                            new JsonSerializerOptions { WriteIndented = true });
-
-                File.WriteAllText(SettingPage.settingFilePath, newJson);
-            }
-            else if(filePath != Settings.ZZZPath && Game == "ZZZ")
-            {
-                Settings.ZZZPath = filePath;
-
-                string newJson = JsonSerializer.Serialize(Settings,
-                            new JsonSerializerOptions { WriteIndented = true });
-
-                File.WriteAllText(SettingPage.settingFilePath, newJson);
-            }
+            await Setting.LoadGamePath(Game, Settings);
         }
 
         private async void ClickRmMemory(object sender, RoutedEventArgs e)

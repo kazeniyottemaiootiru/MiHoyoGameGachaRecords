@@ -1,4 +1,5 @@
 ﻿using log4net;
+using log4net.Repository.Hierarchy;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Shapes;
 using MiHoyoGameGachaRecords.Assets.pages;
@@ -22,7 +23,8 @@ namespace MiHoyoGameGachaRecords
     internal class Setting
     {
         private static readonly ILog log = LogManager.GetLogger(typeof(Setting));
-        
+        private static readonly ResourceLoader loader = ResourceLoader.GetForViewIndependentUse();
+
         /// <summary>
         /// 调用系统API获取exe文件路径
         /// </summary>
@@ -142,6 +144,54 @@ namespace MiHoyoGameGachaRecords
             string jsonString = JsonSerializer.Serialize(defaultSettings, options);
             File.WriteAllText(path, jsonString);
             return defaultSettings;
+        }
+
+        public static async Task LoadGamePath(string game, SettingsData settings)
+        {
+            string gameExe = game switch
+            {
+                "Genshin" => "Yuanshen.exe",
+                "HoukaiStarRail" => "StarRail.exe",
+                "ZZZ" => "ZenlessZoneZero.exe",
+                _ => string.Empty
+            };
+            await MessageBox.Info(string.Format(loader.GetString("SettingControl/SelectGame"), gameExe));
+
+            string? filePath = await Setting.GetFilePath(".exe");
+
+            if (filePath == null)
+            {
+                await MessageBox.GamePathIsNull(gameExe);
+                return;
+            }
+
+            if (filePath != settings.GenshinPath && game == "Genshin")
+            {
+                settings.GenshinPath = filePath;
+
+                string newJson = JsonSerializer.Serialize(settings,
+                            new JsonSerializerOptions { WriteIndented = true });
+
+                File.WriteAllText(SettingPage.settingFilePath, newJson);
+            }
+            else if (filePath != settings.HoukaiStarRailPath && game == "HoukaiStarRail")
+            {
+                settings.HoukaiStarRailPath = filePath;
+
+                string newJson = JsonSerializer.Serialize(settings,
+                            new JsonSerializerOptions { WriteIndented = true });
+
+                File.WriteAllText(SettingPage.settingFilePath, newJson);
+            }
+            else if (filePath != settings.ZZZPath && game == "ZZZ")
+            {
+                settings.ZZZPath = filePath;
+
+                string newJson = JsonSerializer.Serialize(settings,
+                            new JsonSerializerOptions { WriteIndented = true });
+
+                File.WriteAllText(SettingPage.settingFilePath, newJson);
+            }
         }
     }
 }

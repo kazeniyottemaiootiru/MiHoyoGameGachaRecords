@@ -78,6 +78,33 @@ public sealed partial class WelcomeGameControl : UserControl
 
     private async void GetHistory_Click(object sender, RoutedEventArgs e)
     {
+        var settings = Setting.LoadSetting();
+        if (settings == null) return;
+        // 无路径添加路径
+        else if (Game == "Genshin" && (settings.GenshinPath == null || settings.GenshinPath == ""))
+        {
+            await Setting.LoadGamePath(Game, settings);
+            settings = Setting.LoadSetting();   // 重新加载文件
+            PathText.Text = loader.GetString("Welcome/InstallPath") + settings.GenshinPath;
+            return;
+        }
+        else if (Game == "HoukaiStarRail" 
+            && (settings.HoukaiStarRailPath == null || settings.HoukaiStarRailPath == ""))
+        {
+            await Setting.LoadGamePath(Game, settings);
+            settings = Setting.LoadSetting();   // 重新加载文件
+            PathText.Text = loader.GetString("Welcome/InstallPath") + settings.HoukaiStarRailPath;
+            return;
+        }
+        else if (Game == "ZZZ" && (settings.ZZZPath == null || settings.ZZZPath == ""))
+        {
+            await Setting.LoadGamePath(Game, settings);
+            settings = Setting.LoadSetting();   // 重新加载文件
+            PathText.Text = loader.GetString("Welcome/InstallPath") + settings.ZZZPath;
+            return;
+        }
+
+
         var radioButtons = new RadioButtons
         {
             ItemsSource = Game switch
