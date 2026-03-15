@@ -203,30 +203,29 @@ public sealed partial class WelcomeGameControl : UserControl
 
         GetWebJsonItems jsonItems = new(InstallPath);
         if (gachaType != null)
-            await jsonItems.CreatCSVFile(await jsonItems.NeedJson(gachaType.Value, SelectInfo), 
-                gachaType.Value, SelectInfo);
+            await jsonItems.CreatCSVFile(gachaType.Value, SelectInfo);
         else
         {
             if (Game == "Genshin")
             {
-                await jsonItems.CreatCSVFile(await jsonItems.NeedJson(301, SelectInfo), 301, SelectInfo);
-                await jsonItems.CreatCSVFile(await jsonItems.NeedJson(302, SelectInfo), 302, SelectInfo);
-                await jsonItems.CreatCSVFile(await jsonItems.NeedJson(200, SelectInfo), 200, SelectInfo);
-                await jsonItems.CreatCSVFile(await jsonItems.NeedJson(500, SelectInfo), 500, SelectInfo);
+                await jsonItems.CreatCSVFile(301, SelectInfo);
+                await jsonItems.CreatCSVFile(302, SelectInfo);
+                await jsonItems.CreatCSVFile(200, SelectInfo);
+                await jsonItems.CreatCSVFile(500, SelectInfo);
             }
             else if (Game == "HoukaiStarRail")
             {
-                await jsonItems.CreatCSVFile(await jsonItems.NeedJson(11, SelectInfo), 11, SelectInfo);
-                await jsonItems.CreatCSVFile(await jsonItems.NeedJson(12, SelectInfo), 12, SelectInfo);
-                await jsonItems.CreatCSVFile(await jsonItems.NeedJson(21, SelectInfo), 21, SelectInfo);
-                await jsonItems.CreatCSVFile(await jsonItems.NeedJson(1, SelectInfo), 1, SelectInfo);
+                await jsonItems.CreatCSVFile(11, SelectInfo);
+                await jsonItems.CreatCSVFile(12, SelectInfo);
+                await jsonItems.CreatCSVFile(21, SelectInfo);
+                await jsonItems.CreatCSVFile(1, SelectInfo);
             }
             else if (Game == "ZZZ")
             {
-                await jsonItems.CreatCSVFile(await jsonItems.NeedJson(2001, SelectInfo), 2001, SelectInfo);
-                await jsonItems.CreatCSVFile(await jsonItems.NeedJson(3001, SelectInfo), 3001, SelectInfo);
-                await jsonItems.CreatCSVFile(await jsonItems.NeedJson(1001, SelectInfo), 1001, SelectInfo);
-                await jsonItems.CreatCSVFile(await jsonItems.NeedJson(5001, SelectInfo), 5001, SelectInfo);
+                await jsonItems.CreatCSVFile(2001, SelectInfo);
+                await jsonItems.CreatCSVFile(3001, SelectInfo);
+                await jsonItems.CreatCSVFile(1001, SelectInfo);
+                await jsonItems.CreatCSVFile(5001, SelectInfo);
             }
         }
         await MessageBox.Info(loader.GetString("Welcome/GetFinish"));

@@ -488,4 +488,10 @@
   <data name="HistoryView.NotFound" xml:space="preserve">
     <value>未找到檔案，請取得記錄後再試。</value>
   </data>
+  <data name="GetWebJson.DifferentLang" xml:space="preserve">
+    <value>目前記錄的語言和取得記錄的語言不同，是否繼續？</value>
+  </data>
+  <data name="GetWebJson.BuildFalse" xml:space="preserve">
+    <value>取得抽卡記錄失敗！</value>
+  </data>
 </root>

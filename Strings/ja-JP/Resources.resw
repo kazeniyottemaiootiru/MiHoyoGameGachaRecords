@@ -488,4 +488,10 @@
   <data name="HistoryView.NotFound" xml:space="preserve">
     <value>ファイルが見つかりません。記録を取得してから再試行してください。</value>
   </data>
+  <data name="GetWebJson.DifferentLang" xml:space="preserve">
+    <value>現在のレコードの言語は、レコードを取得する際に使用した言語と異なります。続行しますか？</value>
+  </data>
+  <data name="GetWebJson.BuildFalse" xml:space="preserve">
+    <value>ガチャ記録の取得に失敗しました！</value>
+  </data>
 </root>

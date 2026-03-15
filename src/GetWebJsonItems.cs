@@ -22,6 +22,7 @@ namespace MiHoyoGameGachaRecords
         string gamePath { get; } = gamePath;
         string game { get; } = Path.GetFileName(gamePath);
         private string Text { get; set; } = string.Empty;
+        private string Appdatas { get; } = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
         private SettingsData Settings { get; set; } = Setting.LoadSetting();
 
         private static readonly ILog log = LogManager.GetLogger(typeof(GetWebJsonItems));
@@ -35,7 +36,7 @@ namespace MiHoyoGameGachaRecords
         /// 崩坏星穹铁道：up角色：11，光锥：12，常驻：1，联动：21；
         /// 绝区零：up角色：2001，音擎：3001，常驻：1001，邦布：5001</param>
         /// <returns>可用URL</returns>
-        public async Task<List<Item>?> NeedJson(int gachaType, TextBlock textBlock, string time = "")
+        private async Task<List<Item>?> NeedJson(int gachaType, TextBlock textBlock, string time = "")
         {
             // up
             if (gachaType == 301 || gachaType == 11) Text = loader.GetString("Type/UP");
@@ -62,6 +63,7 @@ namespace MiHoyoGameGachaRecords
                 Item? jsonInfo = null;
 
                 using HttpClient client = new();
+                string url = string.Empty;
 
                 for (int i = urls.Count - 1; i >= 0; i--)
                 {
@@ -71,7 +73,14 @@ namespace MiHoyoGameGachaRecords
                         bool flag = false;
 
                         jsonInfo = JsonSerializer.Deserialize<Item>(webInfo);
-                        
+
+                        // 如果最后一个链接不可用
+                        if (i == urls.Count - 1)
+                        {
+                            await MessageBox.Info(loader.GetString("GetWebJson/OpenGame"));
+                            break;
+                        }
+
                         if (jsonInfo != null)
                         {
                             if (jsonInfo.data == null)
@@ -86,60 +95,13 @@ namespace MiHoyoGameGachaRecords
                                 if (!isContinue) return null;
                             }
                             string uid = jsonInfo.data.list[0].uid;
-                            flag = await MessageBox.InfoYesOrNo($"{loader.GetString("GetWebJsonItems/isYourUID")}UID：{uid}");
+                            flag = await MessageBox
+                                .InfoYesOrNo($"{loader.GetString("GetWebJsonItems/isYourUID")}UID：{uid}");
                         }
                         if (!flag) continue;
 
-                        // 如果内容符合要求就返回
-                        if (jsonInfo != null && jsonInfo.retcode == 0)
-                        {
-                            items = [];
-                            string trueUrl = UrlSet(urls[i], "0", gachaType);  // 保证从头开始
-                            jsonInfo = null;
-                            jsonInfo = JsonSerializer.Deserialize<Item>(await client.GetStringAsync(trueUrl));
-                            if (jsonInfo != null)
-                                items.Add(jsonInfo);
-                            string idTemp = "";
-
-                            bool wTime = true;
-                            int page = 1;
-                            while (wTime)
-                            {
-                                if (jsonInfo?.data?.list == null || jsonInfo.data.list.Count == 0) break;
-                                string end_id = jsonInfo.data.list[^1].id;    // 取最后一个ID
-
-                                if (idTemp != end_id)
-                                {
-                                    idTemp = end_id;
-                                    trueUrl = UrlSet(trueUrl, end_id, gachaType);
-                                    jsonInfo = null;
-                                    jsonInfo = JsonSerializer.Deserialize<Item>(await client.GetStringAsync(trueUrl));
-                                    textBlock.Text = string.Format(loader.GetString("GetWebJson/Select"), Text, page);
-                                    page++;
-                                    Random rnd = new(); // 生成随机值，模拟点击
-                                    Thread.Sleep(rnd.Next(500, 1000));  // 防止访问过快导致无法访问
-
-                                    if (jsonInfo != null && !(jsonInfo?.data?.list == null 
-                                        ||jsonInfo.data.list.Count == 0))
-                                        items.Add(jsonInfo);
-                                    if (time != "")
-                                    {
-                                        DateTime time1 = DateTime.Parse(time);
-                                        DateTime time2 = DateTime.Parse(jsonInfo.data.list[^1].time);
-                                        if (time1 > time2) wTime = false;
-                                    }
-                                }
-                                else break;
-                            }
-                            break;
-                        }
-
-                        // 如果最后一个链接不可用
-                        if (i == urls.Count - 1)
-                        {
-                            await MessageBox.Info(loader.GetString("GetWebJson/OpenGame"));
-                            break;
-                        }
+                        url = urls[i];  // url传出循环
+                        break;
                     }
                     catch (Exception ex)
                     {
@@ -147,6 +109,70 @@ namespace MiHoyoGameGachaRecords
                         log.Error($"获取数据失败，错误信息：{ex}");
                     }
                 }
+
+                // 确保语言一致性
+                string recordsLangFilePath = Path
+                    .Combine(Appdatas, "History", items[0].data.list[0].uid, "FileLang");
+                if (!File.Exists(recordsLangFilePath))
+                {
+                    File.Create(recordsLangFilePath).Close();
+                    File.WriteAllText(recordsLangFilePath, items[0].data.list[0].lang);
+                }
+                else
+                {
+                    string recordsLang = File.ReadAllText(recordsLangFilePath);
+                    bool isContinue = false;
+                    if (recordsLang != jsonInfo.data.list[0].lang)
+                    {
+                        isContinue = await MessageBox.InfoYesOrNo(loader.GetString("GetWebJson/DifferentLang"));
+                        if (!isContinue) return null;
+                        File.WriteAllText(recordsLangFilePath, items[0].data.list[0].lang); // 写入当前语言
+                    }
+                }
+
+                // 如果内容符合要求就返回
+                if (jsonInfo != null && jsonInfo.retcode == 0 && url != string.Empty)
+                {
+                    items = [];
+                    string trueUrl = UrlSet(url, "0", gachaType);  // 保证从头开始
+                    jsonInfo = null;
+                    jsonInfo = JsonSerializer.Deserialize<Item>(await client.GetStringAsync(trueUrl));
+                    if (jsonInfo != null)
+                        items.Add(jsonInfo);
+                    string idTemp = "";
+
+                    bool wTime = true;
+                    int page = 1;
+                    while (wTime)
+                    {
+                        if (jsonInfo?.data?.list == null || jsonInfo.data.list.Count == 0) break;
+                        string end_id = jsonInfo.data.list[^1].id;    // 取最后一个ID
+
+                        if (idTemp != end_id)
+                        {
+                            idTemp = end_id;
+                            trueUrl = UrlSet(trueUrl, end_id, gachaType);
+                            jsonInfo = null;
+                            jsonInfo = JsonSerializer.Deserialize<Item>(await client.GetStringAsync(trueUrl));
+                            textBlock.Text = string.Format(loader.GetString("GetWebJson/Select"), Text, page);
+                            page++;
+                            Random rnd = new(); // 生成随机值，模拟点击
+                            Thread.Sleep(rnd.Next(500, 1000));  // 防止访问过快导致无法访问
+
+                            if (jsonInfo != null && !(jsonInfo?.data?.list == null
+                                || jsonInfo.data.list.Count == 0))
+                                items.Add(jsonInfo);
+                            if (time != "")
+                            {
+                                DateTime time1 = DateTime.Parse(time);
+                                DateTime time2 = DateTime.Parse(jsonInfo.data.list[^1].time);
+                                if (time1 > time2) wTime = false;
+                            }
+                        }
+                        else break;
+                    }
+                }
+
                 return items;
             }
         }
@@ -223,13 +249,14 @@ namespace MiHoyoGameGachaRecords
                 }
             }
             mems.Add(new Mem { name = name, time = time, count = count });
+
             return mems;
         }
 
         ///<summary>创建CSV文件存储记录，并完成增量记录</summary>
-        public async Task CreatCSVFile(List<Item>? items, int gachaType, TextBlock textBlock)
+        public async Task CreatCSVFile(int gachaType, TextBlock textBlock)
         {
-            string dirPath = Path.Combine(Windows.Storage.ApplicationData.Current.LocalFolder.Path, "History");
+            string dirPath = Path.Combine(Appdatas, "History");
             if (!Directory.Exists(dirPath)) Directory.CreateDirectory(dirPath);
 
             string subDir = game switch
@@ -245,6 +272,13 @@ namespace MiHoyoGameGachaRecords
             fileDirPath = Path.Combine(dirPath, subDir);
 
             if (!Directory.Exists(fileDirPath)) Directory.CreateDirectory(fileDirPath);
+
+            List<Item>? items = await NeedJson(gachaType, textBlock);
+            if (items == null)
+            {
+                await MessageBox.Error(loader.GetString("GetWebJson/BuildFalse"));
+                return;
+            }
 
             if (items == null || items.Count == 0 || items[0].data.list.Count == 0) return;
             fileDirPath = Path.Combine(fileDirPath, items[0].data.list[0].uid);

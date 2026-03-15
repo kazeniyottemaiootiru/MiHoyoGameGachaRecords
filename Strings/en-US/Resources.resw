@@ -488,4 +488,10 @@
   <data name="HistoryView.NotFound" xml:space="preserve">
     <value>File not found, please retrieve the record and try again.</value>
   </data>
+  <data name="GetWebJson.DifferentLang" xml:space="preserve">
+    <value>The language of the current record is different from the language used to retrieve the record. Do you want to continue?</value>
+  </data>
+  <data name="GetWebJson.BuildFalse" xml:space="preserve">
+    <value>Failed to retrieve gacha records!</value>
+  </data>
 </root>
