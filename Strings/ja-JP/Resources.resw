@@ -494,4 +494,7 @@
   <data name="GetWebJson.BuildFalse" xml:space="preserve">
     <value>ガチャ記録の取得に失敗しました！</value>
   </data>
+  <data name="Setting.FaildCopy" xml:space="preserve">
+    <value>ファイルのコピーに失敗しました。</value>
+  </data>
 </root>

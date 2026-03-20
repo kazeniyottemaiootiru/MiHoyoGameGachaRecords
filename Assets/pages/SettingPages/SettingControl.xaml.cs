@@ -574,11 +574,31 @@ new() { name = "Weeping Cradle", time = "2024-07-04" }
                 exPath = Path.Combine(exPath, Game);
                 if (!Directory.Exists(exPath)) Directory.CreateDirectory(exPath);
 
-                foreach (string path in Directory.GetFiles(hisPath))
+                foreach (string path in Directory.GetDirectories(hisPath))
                 {
-                    string fileName = Path.GetFileName(path);
-                    string destinationPath = Path.Combine(exPath, fileName);
-                    File.Copy(path, destinationPath, true);
+                    string pathWithUID = Path.Combine(hisPath, path);
+                    string destinationPathWithUID = Path.Combine(exPath, Path.GetFileName(path));
+                    if (!Directory.Exists(destinationPathWithUID)) Directory.CreateDirectory(destinationPathWithUID);
+                    foreach (var i in Directory.GetFiles(pathWithUID))
+                    {
+                        string uid = Path.GetFileName(path);
+                        string fileName = Path.GetFileName(i);
+                        string destinationPath = Path.Combine(exPath, uid, fileName);
+                        try
+                        {
+                            using var sourceStream = new FileStream(Path.Combine(pathWithUID, fileName),
+                                FileMode.Open, FileAccess.Read);
+                            using var desStream = new FileStream(destinationPath, FileMode.Create, FileAccess.Write);
+
+                            sourceStream.CopyTo(desStream);
+                        }
+                        catch (Exception ex)
+                        {
+                            await MessageBox.Error(loader.GetString("Setting/FaildCopy"));
+                            log.Error($"复制抽卡记录失败，错误原因：{ex}");
+                            return;
+                        }
+                    }
                 }
 
                 await MessageBox.Info(loader.GetString("SettingControl/EXFinish"));

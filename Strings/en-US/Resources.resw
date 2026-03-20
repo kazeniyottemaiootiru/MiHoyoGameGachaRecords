@@ -494,4 +494,7 @@
   <data name="GetWebJson.BuildFalse" xml:space="preserve">
     <value>Failed to retrieve gacha records!</value>
   </data>
+  <data name="Setting.FaildCopy" xml:space="preserve">
+    <value>Failed to copy files.</value>
+  </data>
 </root>

@@ -1,4 +1,6 @@
 using log4net;
+using log4net.Repository.Hierarchy;
+using Microsoft.UI.Windowing;
 using Microsoft.UI.Xaml;
 using Microsoft.UI.Xaml.Controls;
 using Microsoft.UI.Xaml.Controls.Primitives;
@@ -6,20 +8,20 @@ using Microsoft.UI.Xaml.Data;
 using Microsoft.UI.Xaml.Input;
 using Microsoft.UI.Xaml.Media;
 using Microsoft.UI.Xaml.Navigation;
+using Microsoft.Windows.Globalization;
 using MiHoyoGameGachaRecords.Assets.pages.SettingPages;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.Json;
+using System.Threading.Tasks;
+using Windows.ApplicationModel.Resources;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
-using System.Text.Json;
-using Microsoft.Windows.Globalization;
-using System.Threading.Tasks;
-using Windows.UI.ViewManagement;
 using Windows.UI;
-using Microsoft.UI.Windowing;
+using Windows.UI.ViewManagement;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -238,7 +240,21 @@ namespace MiHoyoGameGachaRecords.Assets.pages
                 {
                     string fileName = Path.GetFileName(path);
                     string destinationPath = Path.Combine(opPath, fileName);
-                    File.Copy(path, destinationPath, true);
+                    try
+                    {
+                        using var source = new FileStream(path, FileMode.Open, FileAccess.Read);
+                        using var destition = new FileStream(destinationPath, FileMode.Create, FileAccess.Write);
+
+                        source.CopyTo(destition);
+                    }
+                    catch (Exception ex) 
+                    {
+                        await MessageBox.Error(ResourceLoader.GetForViewIndependentUse()
+                            .GetString("Setting/FaildCopy"));
+                        log.Error($"复制日志失败，错误原因：{ex}");
+                        return;
+                    }
+                    //File.Copy(path, destinationPath, true);
                 }
 
                 await MessageBox.OutPutFinish(opPath);

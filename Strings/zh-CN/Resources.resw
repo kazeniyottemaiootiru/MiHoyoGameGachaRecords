@@ -459,4 +459,7 @@
   <data name="GetWebJson.BuildFalse" xml:space="preserve">
     <value>获取抽卡记录失败！</value>
   </data>
+  <data name="Setting.FaildCopy" xml:space="preserve">
+    <value>复制文件失败。</value>
+  </data>
 </root>
